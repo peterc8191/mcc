@@ -25,7 +25,7 @@ export default function Footer() {
               Jenkinstown, Dundalk, Ireland
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Email: info@mccc.com
+              Email: info@connollycontracts.ie
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Phone: +1 234 567 8901
@@ -35,7 +35,7 @@ export default function Footer() {
         <Box mt={5}>
           <Typography variant="body2" color="text.secondary" align="center">
             {"Copyright © "}
-            <Link color="inherit" href="https://www.mcc.com/">
+            <Link color="inherit" href="https://www.connollycontracts.ie/">
               MCC
             </Link>{" "}
             {new Date().getFullYear()}
