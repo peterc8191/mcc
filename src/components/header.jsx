@@ -1,4 +1,4 @@
-import logo from "../images/mcc_logo.png";
+import logo from "../images/MCC_Logo.png";
 import { Grid, Typography } from "@mui/material";
 
 function Header() {

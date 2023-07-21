@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Slide, Stack } from "@mui/material";
-import home from "../images/homeImg.webp";
+import home from "../images/homeImg.jpeg";
 import commercial from "../images/commecial.jpg";
 
 function ImageStack() {

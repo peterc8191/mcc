@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Grid, Typography } from "@mui/material";
 import PortfolioItem from "./portfolio-item";
-import home from "../images/homeImg.webp";
+import home from "../images/homeImg.jpeg";
 import commercial from "../images/commecial.jpg";
 import appartment from "../images/appartment.jpg";
 
