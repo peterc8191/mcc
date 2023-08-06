@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.92c80acd.css",
-    "main.js": "/static/js/main.00f652a0.js",
+    "main.js": "/static/js/main.7d0956f1.js",
     "static/js/787.1cc71d2a.chunk.js": "/static/js/787.1cc71d2a.chunk.js",
     "static/media/appartment.jpg": "/static/media/appartment.5b1607b6991ec5da9a68.jpg",
     "static/media/liffey.jpg": "/static/media/liffey.09c7b106b596cc65409d.jpg",
@@ -10,11 +10,11 @@
     "static/media/MCC_Logo.png": "/static/media/MCC_Logo.4c562ff7ec78b63288a4.png",
     "index.html": "/index.html",
     "main.92c80acd.css.map": "/static/css/main.92c80acd.css.map",
-    "main.00f652a0.js.map": "/static/js/main.00f652a0.js.map",
+    "main.7d0956f1.js.map": "/static/js/main.7d0956f1.js.map",
     "787.1cc71d2a.chunk.js.map": "/static/js/787.1cc71d2a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92c80acd.css",
-    "static/js/main.00f652a0.js"
+    "static/js/main.7d0956f1.js"
   ]
 }
