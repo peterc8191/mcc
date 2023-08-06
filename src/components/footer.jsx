@@ -28,7 +28,10 @@ export default function Footer() {
               Email: info@connollycontracts.ie
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Phone: +1 234 567 8901
+              Telephone: 042-9371985
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Mobile: 087-2791740
             </Typography>
           </Grid>
         </Grid>
