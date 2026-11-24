@@ -7,10 +7,10 @@ function ImageStack() {
   return (
     <Stack spacing={0}>
       <Slide direction="right" in={true} mountOnEnter unmountOnExit>
-        <img src={home} className="image-stack" alt={"logo"} />
+        <img src={home} className="image-stack" alt="Completed residential construction project" />
       </Slide>
       <Slide direction="right" in={true} mountOnEnter unmountOnExit>
-        <img src={commercial} className="image-stack" alt={"logo"} />
+        <img src={commercial} className="image-stack" alt="Completed commercial construction project" />
       </Slide>
     </Stack>
   );

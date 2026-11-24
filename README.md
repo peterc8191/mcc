@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+# Michael Connolly Contracts (mcc)
+
+Marketing site for Michael Connolly Contracts, a construction company based in Dundalk, Ireland. Built with Create React App and MUI, deployed to GitHub Pages at the custom domain configured in `public/CNAME`.
+
+## Site structure
+
+- `src/pages/` — routed pages: `home.jsx` (`/`), `projects-listing.jsx` (`/projects`), `not-found.jsx` (catch-all).
+- `src/components/layout.jsx` — shared shell (nav bar + page content + footer) rendered for every route.
+- `src/components/nav-bar.jsx` — sticky top navigation, collapses to a `Drawer` menu on mobile.
+- `src/data/projects.js` — the "Projects Completed" content: a plain array of `{ id, image, category }` objects, rendered as a photo gallery on the home page and the `/projects` page via `src/components/gallery-item.jsx`. **To add a completed project, add real photos to `src/images/` and add an entry here** — there's no CMS or backend, and no per-project detail pages (the gallery only ever shows the photo and a category label, since no per-job details like location/date/client are tracked yet).
+- `src/theme.js` — the site's MUI theme (colors only, no component overrides).
+- Contact information lives only in the footer (`src/components/footer.jsx`); the nav's "Contact" link scrolls to it rather than navigating to a separate page.
+
+Routing is handled by `react-router-dom` (`BrowserRouter`). Because GitHub Pages serves static files with no server-side rewrites, a direct visit or refresh on `/projects` is handled by the standard SPA-fallback trick: `public/404.html` redirects unmatched paths back to `/` with the original path encoded in the query string, and an inline script in `public/index.html` decodes it back via `history.replaceState` before React mounts. Both files are static and require no build configuration.
+
+## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -20,14 +20,83 @@ html,
   position: relative;
 }
 
+/* Animated abstract overlay drawn on top of the hero photo */
+.hero-motion-graphic {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-motion-graphic::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.07) 0px,
+    rgba(255, 255, 255, 0.07) 2px,
+    transparent 2px,
+    transparent 40px
+  );
+  animation: heroStripes 18s linear infinite;
+}
+
+@keyframes heroStripes {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(56px, 56px);
+  }
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  animation: heroFloat 12s ease-in-out infinite;
+}
+
+.hero-glow-one {
+  width: 320px;
+  height: 320px;
+  top: -80px;
+  left: 10%;
+  background: #59617d;
+}
+
+.hero-glow-two {
+  width: 260px;
+  height: 260px;
+  bottom: -60px;
+  right: 12%;
+  background: #a9b6d1;
+  animation-delay: -6s;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, -30px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-motion-graphic::before,
+  .hero-glow {
+    animation: none;
+  }
+}
+
 /* Place text in the middle of the image */
 .hero-text {
   color: white;
-  animation-name: fadeIn;
-  animation-duration: 2s;
-}
-
-.logo-animation {
   animation-name: fadeIn;
   animation-duration: 2s;
 }
@@ -38,9 +107,9 @@ html,
 }
 
 .info-card {
-  display: "flex";
-  justify-content: "flex-start";
-  flex-direction: "column";
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   animation-name: fadeIn;
   animation-duration: 2s;
 }
@@ -70,14 +139,16 @@ html,
   animation-name: fadeIn;
 }
 
-.logo-image {
-  max-width: 100%;
-  height: auto;
-  margin: auto;
+.container-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
 }
 
-.container-wrapper {
-  padding: 40px;
+@media (max-width: 600px) {
+  .container-wrapper {
+    padding: 24px 20px;
+  }
 }
 
 .MuiSvgIcon-root.center-svg {
@@ -90,38 +161,3 @@ html,
   margin-top: 10px;
 }
 
-.portfolio-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-}
-
-.portfolio-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #008cba;
-}
-
-.portfolio-container:hover .portfolio-overlay {
-  opacity: 1;
-}
-
-.portfolio-text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
