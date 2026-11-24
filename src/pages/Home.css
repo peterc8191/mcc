@@ -1,0 +1,118 @@
+.hero {
+  background:
+    linear-gradient(90deg, rgba(10, 24, 38, 0.85) 0%, rgba(10, 24, 38, 0.55) 45%, rgba(10, 24, 38, 0) 80%),
+    url("../assets/hero-waves.png") center bottom / cover no-repeat,
+    linear-gradient(160deg, var(--color-navy-950) 0%, var(--color-navy-800) 55%, var(--color-navy-700) 100%);
+  color: var(--color-white);
+  padding: 120px 0 100px;
+}
+
+.hero__inner {
+  max-width: 760px;
+}
+
+.hero__title {
+  color: var(--color-white);
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  font-weight: 800;
+  margin-top: 6px;
+}
+
+.hero__subtitle {
+  margin-top: 22px;
+  font-size: 1.1rem;
+  color: var(--color-slate-200);
+  max-width: 580px;
+}
+
+.hero__actions {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stats-bar {
+  background: var(--color-navy-900);
+  padding: 36px 0;
+}
+
+.stats-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stats-bar__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-bar__item:last-child {
+  border-right: none;
+}
+
+.stats-bar__value {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--color-blue-400);
+}
+
+.stats-bar__label {
+  font-size: 0.82rem;
+  color: var(--color-slate-400);
+}
+
+.section--muted {
+  background: #f3f6fa;
+}
+
+.cta-banner {
+  background: var(--color-navy-950);
+  color: var(--color-white);
+  padding: 64px 0;
+}
+
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cta-banner h2 {
+  color: var(--color-white);
+  font-size: 1.7rem;
+}
+
+.cta-banner p {
+  margin-top: 8px;
+  color: var(--color-slate-400);
+}
+
+@media (max-width: 760px) {
+  .stats-bar__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-bar__item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 16px;
+  }
+
+  .stats-bar__item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .cta-banner__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
